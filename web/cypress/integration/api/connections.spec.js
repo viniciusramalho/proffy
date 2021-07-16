@@ -6,9 +6,9 @@ context('Connections endpoint', () => {
         
         //cy.api para retornar visualmente na execução (@bahmutov/cy-api)
         cy.api({
-            method: `${Cypress.config().apiUrl}connections`,
-            url: '',
-            headers: { 'Accept-Language': 'en-us', },
+            method: 'GET',
+            url: `${Cypress.config().apiUrl}connections`,
+            headers: { 'Accept-Language': 'en-us' },
         }).then((response) =>{
             //asserts de retorno da API
             expect(response.status).to.eq(200)
