@@ -13,7 +13,7 @@ context('Connections endpoint', () => {
             //asserts de retorno da API
             expect(response.status).to.eq(200)
 
-            expect(response.duration).lessThan(20) //resposta menor que x ms
+            expect(response.duration).lessThan(40) //resposta menor que x ms
 
             expect(response.body)
                 .to.have.property('total')
